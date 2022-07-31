@@ -2,9 +2,9 @@ package com.company.practice.ObjectOrientedProgramming.Box;
 
 public class Box {
 
-    private double width;
-    private double height;
-    private double depth;
+    double width;
+    double height;
+    double depth;
 
     Box (Box ob) {
         width  = ob.width;
@@ -20,9 +20,9 @@ public class Box {
     }
 
     Box () {
-        width  = -1;
-        height = -1;
-        depth = -1;
+        this.width  = -1;
+        this.height = -1;
+        this.depth = -1;
     }
 
     Box (double length) {
@@ -33,10 +33,10 @@ public class Box {
         return width * height * depth;
     }
 
-//    public void setDimension (double w, double h, double d) {
-//        width = w;
-//        height = h;
-//        depth = d;
-//    }
+    public void setDimension (double w, double h, double d) {
+        width = w;
+        height = h;
+        depth = d;
+    }
 
 }

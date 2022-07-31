@@ -7,7 +7,7 @@ public enum OperationType {
     SHOW ("3", ". Показать содержимое списка."),
     CONTAINS ("4", ". Проверить есть ли значение в списке."),
     REPLACE ("5", ". Заменить значение в списке."),
-    EXIT ("6", "Выход");
+    EXIT ("6", ". Выход");
 
     private final String desc;
     private final String number;

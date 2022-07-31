@@ -25,7 +25,7 @@ public class Main {
                     System.out.println(line);
                 }
             } catch (Exception e) {
-//                e.printStackTrace();
+                e.printStackTrace();
                 logger.log(Level.INFO, String.format("File '%s' not found", path));
 
             }
