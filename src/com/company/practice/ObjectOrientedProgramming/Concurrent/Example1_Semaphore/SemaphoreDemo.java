@@ -11,7 +11,7 @@ public class SemaphoreDemo {
 
         Semaphore semaphore = new Semaphore(1);
 
-        new IncrementThread(semaphore, "A").run();
-        new DecrementThread(semaphore, "B").run();
+        new Thread(new IncrementThread(semaphore, "A")).start();
+        new Thread(new DecrementThread(semaphore, "B")).start();
     }
 }

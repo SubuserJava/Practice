@@ -11,7 +11,7 @@ public class Main {
         directory.mkdirs();
 
         File fileByPath = new File("G:/Business/My/JavaProjects/Practice/example_directory/run/skip/java/exampleFile.txt");
-        if (!fileByPath.exists()) {
+        if (!fileByPath.isFile()) {
             try {
                 if (fileByPath.createNewFile()) {
                     System.out.println("file was create");

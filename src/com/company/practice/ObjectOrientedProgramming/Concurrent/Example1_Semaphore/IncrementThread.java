@@ -19,10 +19,10 @@ public class IncrementThread implements Runnable {
             System.out.print("Поток '" + name + "' ожидает разрешения.\n");
             semaphore.acquire();
             System.out.print("Поток '" + name + "' получает разрешения.\n");
-            for (int i = 0; i < 10; i++) {
+            for (int i = 0; i < 5; i++) {
                 Shared.count++;
                 System.out.print(name + ": " + Shared.count + "\n");
-                Thread.sleep(10);
+                Thread.sleep(1000);
             }
         } catch (InterruptedException e) {
             e.printStackTrace();

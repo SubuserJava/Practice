@@ -12,7 +12,12 @@ public class Producer implements Runnable {
     @Override
     public void run() {
         for (int i = 0; i < 20; i++) {
-            q.put(i);
+            try {
+                q.put(i);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
     }
 }
+
