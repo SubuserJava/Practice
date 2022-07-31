@@ -17,7 +17,7 @@ public class Main {
         fillNumberList(numberList, scanner);
 
         printStartOperationDialog();
-
+        outer:
         while (scanner.hasNextLine()) {
             String currentOperation = scanner.nextLine();
             OperationType enumByNumber = OperationType.getEnumByNumber(currentOperation);
@@ -32,7 +32,9 @@ public class Main {
                 case SHOW -> System.out.println("Elements of the list: \n" + numberList);
                 case CONTAINS -> containsOperation(numberList, scanner);
                 case REPLACE -> replaceOperation(scanner, numberList);
-//                case EXIT ->
+                case EXIT -> {
+                    break outer;
+                }
                 default -> System.out.println("Number of action is wrong!");
             }
             printStartOperationDialog();
