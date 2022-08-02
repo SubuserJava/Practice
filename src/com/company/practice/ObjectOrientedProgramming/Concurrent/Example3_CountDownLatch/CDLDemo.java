@@ -12,7 +12,7 @@ public class CDLDemo {
         CountDownLatch countDownLatch1 = new CountDownLatch(5);
 
         System.out.println("Запуск потока исполнения.");
-        new Thread(new MyThread(countDownLatch1)).start();
+        new Thread(new MyThread1(countDownLatch1)).start();
 
         try {
             countDownLatch1.await();

@@ -3,12 +3,12 @@ package com.company.practice.ObjectOrientedProgramming.Concurrent.Example4_Cycli
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
 
-public class MyThread implements Runnable {
+public class MyThread2 implements Runnable {
 
-    CyclicBarrier cyclicBarrier;
-    String name;
+    private CyclicBarrier cyclicBarrier;
+    private String name;
 
-    public MyThread(CyclicBarrier cyclicBarrier, String name) {
+    public MyThread2(CyclicBarrier cyclicBarrier, String name) {
         this.cyclicBarrier = cyclicBarrier;
         this.name = name;
     }
@@ -16,6 +16,7 @@ public class MyThread implements Runnable {
     @Override
     public void run() {
         System.out.println("Thread: " + name);
+        System.out.println(Shared3.count);
         try {
             cyclicBarrier.await();
         } catch (InterruptedException | BrokenBarrierException e) {

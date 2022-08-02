@@ -2,11 +2,11 @@ package com.company.practice.ObjectOrientedProgramming.Concurrent.Example3_Count
 
 import java.util.concurrent.CountDownLatch;
 
-public class MyThread implements Runnable {
+public class MyThread1 implements Runnable {
 
     CountDownLatch latch;
 
-    public MyThread(CountDownLatch latch) {
+    public MyThread1(CountDownLatch latch) {
         this.latch = latch;
     }
 

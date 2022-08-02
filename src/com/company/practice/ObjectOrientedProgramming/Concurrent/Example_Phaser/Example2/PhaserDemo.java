@@ -12,9 +12,9 @@ public class PhaserDemo {
 
         System.out.print("Запуск потоков\n");
 
-        new Thread(new MyThread1(phaser, "A")).start();
-        new Thread(new MyThread1(phaser, "B")).start();
-        new Thread(new MyThread1(phaser, "C")).start();
+        new Thread(new MyThread5(phaser, "A")).start();
+        new Thread(new MyThread5(phaser, "B")).start();
+        new Thread(new MyThread5(phaser, "C")).start();
 
         while (!phaser.isTerminated()) {
             phaser.arriveAndAwaitAdvance();

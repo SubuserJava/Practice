@@ -2,12 +2,12 @@ package com.company.practice.ObjectOrientedProgramming.Concurrent.Example_Phaser
 
 import java.util.concurrent.Phaser;
 
-public class MyThread implements Runnable {
+public class MyThread4 implements Runnable {
 
     Phaser phaser;
     String name;
 
-    public MyThread(Phaser phaser, String name) {
+    public MyThread4(Phaser phaser, String name) {
         this.phaser = phaser;
         this.name = name;
         phaser.register();

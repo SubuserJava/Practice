@@ -12,11 +12,11 @@ public class BarDemo {
         CyclicBarrier cyclicBarrier = new CyclicBarrier(3, new BarrierAction());
         System.out.println("Запуск потоков.");
 
-        new Thread(new MyThread(cyclicBarrier, "A")).start();
-        new Thread(new MyThread(cyclicBarrier, "B")).start();
-        new Thread(new MyThread(cyclicBarrier, "C")).start();
-        new Thread(new MyThread(cyclicBarrier, "X")).start();
-        new Thread(new MyThread(cyclicBarrier, "Y")).start();
-        new Thread(new MyThread(cyclicBarrier, "Z")).start();
+        new Thread(new MyThread2(cyclicBarrier, "A")).start();
+        new Thread(new MyThread2(cyclicBarrier, "B")).start();
+        new Thread(new MyThread2(cyclicBarrier, "C")).start();
+        new Thread(new MyThread2(cyclicBarrier, "X")).start();
+        new Thread(new MyThread2(cyclicBarrier, "Y")).start();
+        new Thread(new MyThread2(cyclicBarrier, "Z")).start();
     }
 }
