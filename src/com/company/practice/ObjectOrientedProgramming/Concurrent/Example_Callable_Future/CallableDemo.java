@@ -2,10 +2,7 @@ package com.company.practice.ObjectOrientedProgramming.Concurrent.Example_Callab
 
 import java.io.PrintStream;
 import java.nio.charset.StandardCharsets;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
+import java.util.concurrent.*;
 
 public class CallableDemo {
 
@@ -24,10 +21,10 @@ public class CallableDemo {
         future3 = executorService.submit(new Factorial(5));
 
         try {
-            System.out.println(future1.get());
-            System.out.println(future2.get());
-            System.out.println(future3.get());
-        } catch (ExecutionException | InterruptedException exception) {
+            System.out.println(future1.get(10, TimeUnit.MILLISECONDS));
+            System.out.println(future2.get(10, TimeUnit.MILLISECONDS));
+            System.out.println(future3.get(10, TimeUnit.MILLISECONDS));
+        } catch (ExecutionException | InterruptedException | TimeoutException exception) {
             exception.printStackTrace();
         }
         executorService.shutdown();

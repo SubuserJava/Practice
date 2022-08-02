@@ -14,9 +14,9 @@ public class PhaserDemo {
 
         System.out.print("Запуск потоков\n");
 
-        new Thread(new MyThread(threadPhaser,"A")).start();
-        new Thread(new MyThread(threadPhaser,"B")).start();
-        new Thread(new MyThread(threadPhaser,"C")).start();
+        new Thread(new MyThread4(threadPhaser,"A")).start();
+        new Thread(new MyThread4(threadPhaser,"B")).start();
+        new Thread(new MyThread4(threadPhaser,"C")).start();
 
         currentPhase = threadPhaser.getPhase();
         threadPhaser.arriveAndAwaitAdvance();

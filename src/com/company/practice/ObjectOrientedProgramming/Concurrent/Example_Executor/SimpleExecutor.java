@@ -19,10 +19,10 @@ public class SimpleExecutor {
 
         System.out.println("Запуск потоков.");
 
-        executorService.execute(new MyThread("A", cdl1));
-        executorService.execute(new MyThread("B", cdl2));
-        executorService.execute(new MyThread("C", cdl3));
-        executorService.execute(new MyThread("D", cdl4));
+        executorService.execute(new MyThread3("A", cdl1));
+        executorService.execute(new MyThread3("B", cdl2));
+        executorService.execute(new MyThread3("C", cdl3));
+        executorService.execute(new MyThread3("D", cdl4));
 
         try {
             cdl1.await();

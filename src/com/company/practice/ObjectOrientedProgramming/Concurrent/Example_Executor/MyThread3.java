@@ -1,13 +1,14 @@
 package com.company.practice.ObjectOrientedProgramming.Concurrent.Example_Executor;
 
+import javax.sound.midi.Track;
 import java.util.concurrent.CountDownLatch;
 
-public class MyThread implements Runnable{
+public class MyThread3 implements Runnable {
 
     public String name;
     CountDownLatch latch;
 
-    public MyThread(String name, CountDownLatch latch) {
+    public MyThread3(String name, CountDownLatch latch) {
         this.name = name;
         this.latch = latch;
     }
@@ -17,7 +18,6 @@ public class MyThread implements Runnable{
         for (int index = 0; index < 5; index++) {
             System.out.println(name + ": " + index);
             latch.countDown();
-
         }
     }
 }
