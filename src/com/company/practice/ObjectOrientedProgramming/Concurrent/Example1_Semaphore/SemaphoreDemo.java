@@ -9,9 +9,11 @@ public class SemaphoreDemo {
     public static void main(String[] args) {
         System.setOut(new PrintStream(System.out, true, StandardCharsets.UTF_8));
 
-        Semaphore semaphore = new Semaphore(1);
+        Semaphore semaphore = new Semaphore(2);
 
-        new Thread(new IncrementThread(semaphore, "A")).start();
-        new Thread(new DecrementThread(semaphore, "B")).start();
+        new Thread(new IncrementThread(semaphore, "A +")).start();
+        new Thread(new DecrementThread(semaphore, "B -")).start();
+        new Thread(new IncrementThread(semaphore, "C +")).start();
+        new Thread(new DecrementThread(semaphore, "D -")).start();
     }
 }

@@ -1,6 +1,5 @@
 package com.company.practice.ObjectOrientedProgramming.Concurrent.Example_Executor;
 
-import javax.sound.midi.Track;
 import java.util.concurrent.CountDownLatch;
 
 public class MyThread3 implements Runnable {
