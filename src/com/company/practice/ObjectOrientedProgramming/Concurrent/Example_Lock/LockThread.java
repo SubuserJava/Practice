@@ -16,7 +16,7 @@ public class LockThread implements Runnable {
     public void run() {
 
         System.out.print("Запуск потока '" + name + "'.\n");
-        do {
+        while (true) {
             try {
                 System.out.print("Поток '" + name + "' ожидает блокировки счётчика.\n");
                 lock.lock();
@@ -32,6 +32,6 @@ public class LockThread implements Runnable {
                 System.out.print("Поток '" + name + "' разблокирует счётчик.\n");
                 lock.unlock();
             }
-        } while (true);
+        }
     }
 }

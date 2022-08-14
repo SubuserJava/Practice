@@ -17,5 +17,6 @@ public class LockDemo {
         new Thread(new LockThread("B", lock)).start();
         new Thread(new LockThread("C", lock)).start();
         new Thread(new LockThread("D", lock)).start();
+
     }
 }
