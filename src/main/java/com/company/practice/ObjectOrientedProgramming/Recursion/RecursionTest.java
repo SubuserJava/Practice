@@ -14,7 +14,7 @@ public class RecursionTest {
             } else {
                 printArray(i - 1);
             }
-            System.out.println("[" + (i - 1) + "] " + values[i - 1]);
+            System.out.println("[" + (i - 1) + "] - " + values[i - 1]);
         }
     }
 
