@@ -14,6 +14,7 @@ public class Task05 {
         int inputHours = Integer.parseInt(scanner.nextLine());
 
         System.out.println(getTimeRange(inputHours));
+        scanner.close();
     }
 
     private static String getTimeRange(int inputHours) {
