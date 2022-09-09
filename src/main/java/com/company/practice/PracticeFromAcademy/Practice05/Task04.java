@@ -13,7 +13,6 @@ public class Task04 {
     private static final double METERS_IN_YARD = 0.9144d;
 
     public static void main(String[] args) {
-
         System.setOut(new PrintStream(System.out, true, StandardCharsets.UTF_8));
 
         Scanner scanner = new Scanner(System.in);
@@ -25,6 +24,7 @@ public class Task04 {
             case 2 -> System.out.printf("Число %s в дюймах: %s", inputMeters, inputMeters / METERS_IN_INCH);
             case 3 -> System.out.printf("Число %s в ярдах: %s", inputMeters, inputMeters / METERS_IN_YARD);
         }
+        scanner.close();
     }
 
     private static int getChoiceFromMenu() {
