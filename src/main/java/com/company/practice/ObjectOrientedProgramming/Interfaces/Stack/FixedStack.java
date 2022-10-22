@@ -1,4 +1,4 @@
-package com.company.practice.ObjectOrientedProgramming.Stack;
+package com.company.practice.ObjectOrientedProgramming.Interfaces.Stack;
 
 public class FixedStack implements IntStack {
 
