@@ -1,9 +1,9 @@
-package com.company.practice.ObjectOrientedProgramming.Stack;
+package com.company.practice.ObjectOrientedProgramming.Interfaces.Stack;
 
 import java.io.PrintStream;
 import java.nio.charset.StandardCharsets;
 
-public class TestStack {
+public class TestStack1 {
 
     public static void main(String[] args) {
         System.setOut(new PrintStream(System.out, true, StandardCharsets.UTF_8));
