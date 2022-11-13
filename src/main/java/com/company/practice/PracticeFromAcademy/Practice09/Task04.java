@@ -15,11 +15,11 @@ public class Task04 {
         String inputString = scanner.nextLine();
 
         if (new Scanner(inputString).hasNextInt()) {
-            System.out.printf("Var.1 Введённое число%s является палиндромом.\n", isDigitPalindrome(inputString) ? "" : " не");
-            System.out.printf("Var.2 Введённое число%s является палиндромом.\n", isStringPalindromeMethod2(inputString) ? "" : " не");
+            System.out.printf("Method.1 Введённое число%s является палиндромом.\n", isDigitPalindrome(inputString) ? "" : " не");
+            System.out.printf("Method.2 Введённое число%s является палиндромом.\n", isStringPalindromeMethod2(inputString) ? "" : " не");
         } else {
-            System.out.printf("Var.1 Введённая строка%s является палиндромом.\n", isStringPalindromeMethod1(inputString) ? "" : " не");
-            System.out.printf("Var.2 Введённая строка%s является палиндромом.\n", isStringPalindromeMethod2(inputString) ? "" : " не");
+            System.out.printf("Method.1 Введённая строка%s является палиндромом.\n", isStringPalindromeMethod1(inputString) ? "" : " не");
+            System.out.printf("Method.2 Введённая строка%s является палиндромом.\n", isStringPalindromeMethod2(inputString) ? "" : " не");
         }
 
         scanner.close();
